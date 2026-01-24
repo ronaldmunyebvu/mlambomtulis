@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>263 INTERIORS</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            line-height: 1.5;
+            overflow-x: hidden;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            background: #0056b3;
+            color: #ffffff;
+            padding: 10px;
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .logo {
+            width: 50px;
+            height: auto;
+            margin-right: 10px;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 1.4em;
+            flex: 1;
+        }
+
+        nav {
+            display: flex;
+            margin-left: auto;
+            text-align: right;
+        }
+
+        nav a {
+            color: #ffffff;
+            margin: 0 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+            padding: 2px;
+        }
+
+        nav a:hover {
+            color: #ffd700;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1024px;
+            margin: auto;
+            padding: 10px;
+            background: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+            flex-grow: 1;
+        }
+
+        h2 {
+            color: #333;
+            margin: 15px 0;
+            padding: 5px 0;
+            border-bottom: 2px solid #0056b3;
+            font-size: 1.2em;
+        }
+
+        .product-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin: -5px;
+        }
+
+        .product {
+            flex: 1 1 calc(22% - 10px);
+            margin: 5px;
+            padding: 5px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background: #f9f9f9;
+            box-sizing: border-box;
+            transition: transform 0.3s;
+            text-align: center;
+        }
+
+        .product:hover {
+            transform: scale(1.01);
+        }
+
+        .product img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 3px;
+        }
+
+        button {
+            background-color: #0056b3;
+            color: #ffffff;
+            border: none;
+            padding: 12px 20px;
+            cursor: pointer;
+            margin-top: 10px;
+            border-radius: 4px;
+            transition: background-color 0.3s, transform 0.3s;
+            animation: pulse 1s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.1);
+            }
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background: #0056b3;
+            color: white;
+            border-top: 4px solid #ffd700;
+        }
+
+        .toggle-info {
+            display: none; /* Hide descriptions initially */
+            margin-top: 10px; /* Space above descriptions */
+            color: #333; /* Description text color */
+        }
+
+        /* Media Queries for Mobile Responsiveness */
+        @media (max-width: 768px) {
+            .product {
+                flex: 1 1 calc(30% - 10px);
+            }
+
+            .logo {
+                width: 40px;
+            }
+
+            h1 {
+                font-size: 1.2em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="logo.jpg" alt="Logo" class="logo">
+        <h1>Welcome to 263 INTERIORS</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <div class="contact-info">
+        <button onclick="window.location.href='https://wa.me/263777276666'">
+            Contact us on WhatsApp
+        </button>
+    </div>
+
+    <div class="container">
+        <section id="tank-stands">
+            <div class="product-container">
+                <!-- Product 1 -->
+                <div class="product">
+                    <h3>Tank Stands</h3>
+                    <img src="tanks.jpg" alt="Tank Stands">
+                    <button onclick="toggleInfo('tank-stand-info')">View Description</button>
+                    <div id="tank-stand-info" class="toggle-info">
+                        263 Interiors fabricates durable mild steel water tank stands for reliable,
+                       gravity-fed water supply.Stands offer superior strength and are customisable in height
+                       height(1.5m to 6m) to optimize water pressure, and support common capacities(2.500L-10,000l)
+                    Professional fabrication ensures structural integrity.
+                    </div>
+                </div>
+                <!-- Product 2 -->
+                <div class="product">
+                    <h3>Curtain Rods</h3>
+                    <img src="rods.jpg" alt="Curtain Rods">
+                    <button onclick="toggleInfo('curtain-rod-info')">View Description</button>
+                    <div id="curtain-rod-info" class="toggle-info">
+                       263 Interiors offers fully customised, powder-coated curtain rods and accessories
+                        for a durable, elegants finish. Features include superior durability, custom lenth
+                       (1m-6m+), diameter options, Single/Double Rod Systems, and mix-and-match accessories (finials,etc).
+                        Expert installation is also avialable for a complete, hassle-free solution.
+                    </div>
+                </div>
+                <!-- Product 3 -->
+                <div class="product">
+                    <h3>Awnings</h3>
+                    <img src="awnings.jpg" alt="Window and Door Awnings">
+                    <button onclick="toggleInfo('awning-info')">View Description</button>
+                    <div id="awning-info" class="toggle-info">
+                        263 Interiors provides durable Door and Window Awnings for superior
+                         protection and enhanced curb appeal.Features include a modular design for 
+                      scalable coverage (1m, 1.2m, 1.5m,etc), custom colour options, and professional installation for a complete
+                       ,secure solution that shields your exerior from the weather.
+                    </div>
+                </div>
+                <!-- Product 4 -->
+                <div class="product">
+                    <h3>Veranda Screens</h3>
+                    <img src="sliding.jpg" alt="Security Screens">
+                    <button onclick="toggleInfo('security-screen-info')">View Description</button>
+                    <div id="security-screen-info" class="toggle-info">
+                        263 Interior`s Steel Veranda Screens are the ultimate solution for homeowners
+   seeking a sophisticated balance of privacy, protection, and style. Fabricated from high-grade heavy-
+duty mild steel, these screens transform your veranda into a secure, all-weather sanctuary.
+   Whether you are looking to block the wind or create a private retreat,, our screens offer sleek,
+                      industrial edge that complements any modern home.
+                    </div>
+                </div>
+                <!-- Product 5 -->
+                <div class="product">
+                    <h3>Steel Window Frames</h3>
+                    <img src="frames.jpg" alt="Steel Window Frames">
+                    <button onclick="toggleInfo('window-frame-info')">View Description</button>
+                    <div id="window-frame-info" class="toggle-info">
+                        263 Interior`s aluminium Imiattion Steel Window Frames are made from heavy-duty
+    mild  steel for superior security and a sleek, modern look.They feature inegrated, customisable 
+    burglar bars and come in standard and custom sizes and colours to ensure a perfectural fit for modern 
+       architectural designs. Choose 263 Interiors for unmatched security and style.
+                    </div>
+                </div>
+                <!-- Product 6 -->
+                <div class="product">
+                    <h3>Sliding and Hinged Doors</h3>
+                    <img src="hinged.jpg" alt="Sliding and Hinged Doors">
+                    <button onclick="toggleInfo('door-info')">View Description</button>
+                    <div id="door-info" class="toggle-info">
+                        263 Interior`s Premium Steel Sliding doors are engineered from heavy-duty
+          mild steel , offering and uncompromising barrier of security without sacrificing a sleek, minimalist aesthetic.
+         Designed to bridge the gap between indoor and outdoor living, these doors provide the industrial-chic 
+         look  of modern architecture while ensuring maximum durability.
+                    </div>
+                </div>
+                <!-- Product 7 -->
+                <div class="product">
+                    <h3>Security Fence</h3>
+                    <img src="fence.jpg" alt="Security Fence">
+                    <button onclick="toggleInfo('fence-info')">View Description</button>
+                    <div id="fence-info" class="toggle-info">
+                          263 Interiors offers Robust Security Fencing with a fix and supply service.
+                     Fences come in 1.8 or 1.5m heights withbarbed wire toppings for maximum deterrence.
+                       They feature heavy-duty mesh (2.5mm or 2mm wire) and stable 76mm poles. We
+               handle supply and proffessional installation for secure property protection.
+                    </div>
+                </div>
+                <!-- Product 8 -->
+                <div class="product">
+                    <h3>Security screen</h3>
+                    <img src="security.jpg" alt="Security Door">
+                    <button onclick="toggleInfo('security-door-info')">View Description</button>
+                    <div id="security-door-info" class="toggle-info">
+                       263 Interior`s Security Door Screens are the first line of defense for your 
+                   home`s entrances. Forged from heavy-duty mild steel, these screens provide a massive
+                      upgrade in security without the bulky, dated look of traditional gate-work.
+                   Designed to complement our sliding doors and window frames, they offer a sophisticated,
+                   unified aesthetic that guarantees your home is as baeutiful as it is secure.
+                     
+                    </div>
+                </div>
+                <!-- Product 9 -->
+                <div class="product">
+                    <h3>Burglar Bars</h3>
+                    <img src="back.jpg" alt="Burglar Bars">
+                    <button onclick="toggleInfo('burglar-bars-info')">View Description</button>
+                    <div id="burglar-bars-info" class="toggle-info">
+                        263 Interior`s fabricates custom burglar bars that offer a massive upgarde
+                       in security without the bulky, dated look of traditional bars. Engineered from
+             heavy-duty mild steel and finished with premium powder coating, our designs mimic the sleek,
+                minimalist lines of modern aluminum frames. They provide a sophisticated, unified look
+       that protects your home while enhancing its architectural beauty.
+                    </div>
+                </div>
+                <!-- Product 10 -->
+                <div class="product">
+                    <h3>Sliding Gates</h3>
+                    <img src="gates.jpg" alt="Sliding Gates">
+                    <button onclick="toggleInfo('sliding-gates-info')">View Description</button>
+                    <div id="sliding-gates-info" class="toggle-info">
+                        263 Interiors offers Custom Sliding Gates that merge robust security with high-end aesthetics.
+                      Gates are custom-designed to any size with unique styles (slats, panels,etc) and custom colour coatings.
+                          They are space-efficient and work on slopes. We offer proffesional installation for a complete, secure
+                   and seamless solution.
+                    </div>
+                </div>
+                <!-- Product 11 -->
+                <div class="product">
+                    <h3>Steel Doors</h3>
+                    <img src="steel.jpg" alt="Steel Doors">
+                    <button onclick="toggleInfo('steel-doors-info')">View Description</button>
+                    <div id="steel-doors-info" class="toggle-info">
+                        263 Interior`s Premium Steel Doors are the definitive choice for homeowners who demend
+                  maximum security and high-end architectural appeal. Precision-crafted from heavy-duty
+            mild steel, these doors serve as a powerful statements piece for any entrance.
+         whwther you are looking for a grand front door or secure internal transition, our steel doors
+              offer an industrial-chic elegance that is built to last a lifetime.
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2023 263 INTERIORS. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        function toggleInfo(infoId) {
+            const infoElements = document.querySelectorAll('.toggle-info'); // Get all description elements
+            infoElements.forEach(element => {
+                if (element.id !== infoId) { // Hide all except the clicked one
+                    element.style.display = 'none';
+                }
+            });
+
+            const infoElement = document.getElementById(infoId);
+            if (infoElement.style.display === "none" || infoElement.style.display === "") {
+                infoElement.style.display = "block"; // Show the clicked description
+            } else {
+                infoElement.style.display = "none"; // Hide the clicked description
+            }
+        }
+    </script>
+</body>
+</html>
